@@ -1,0 +1,50 @@
+[
+  {
+    "accountType": "Manual",
+    "username": "karinpolgari07@yahoo.com",
+    "password": "pass",
+    "serverAddress": "test.com"
+  },
+  {
+    "accountType": "Advanced",
+    "username": "karinpolgari07@yahoo.com",
+    "password": "passwd",
+    "serverAddress": "karin.com",
+    "serverPath": "/path/karin",
+    "port": "2000",
+    "ssl": true
+  },
+  {
+    "accountType": "Manual",
+    "username": "karinpolgari07@yahoo.com",
+    "password": "passwd",
+    "serverAddress": "karin.com"
+  },
+  {
+    "accountType": "Advanced",
+    "username": "karinpolgari07@yahoo.com",
+    "password": "password",
+    "serverAddress": "ex.com",
+    "serverPath": "/k/path",
+    "port": "2000",
+    "ssl": true
+  },
+  {
+    "accountType": "Advanced",
+    "username": "karinpolgari07@yahoo.com",
+    "password": "password",
+    "serverAddress": "ex.com",
+    "serverPath": "/path/karin",
+    "port": "3000",
+    "ssl": true
+  },
+  {
+    "accountType": "Advanced",
+    "username": "karinpolgari0007@yahoo.com",
+    "password": "paswwowo",
+    "serverAddress": "ex.com",
+    "serverPath": "/path/karinTest",
+    "port": "3000",
+    "ssl": true
+  }
+]
