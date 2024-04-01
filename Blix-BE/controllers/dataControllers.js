@@ -1,7 +1,6 @@
 const fs = require('fs')
 
 const addData = async (newData) => {
-
     fs.readFile('data.json', 'utf-8', (err, data) => {
         if (err){
             console.log(err)
@@ -20,4 +19,26 @@ const addData = async (newData) => {
     })
 } 
 
-module.exports = {addData}
+const createStream = (callback) => {
+    const readStream = fs.createReadStream('data.json', 'utf-8');
+    let data = '';
+  
+    readStream.on('data', (chunk) => {
+      data += chunk;
+    });
+  
+    readStream.on('end', () => {
+      try {
+        const messages = JSON.parse(data);
+        callback(null, messages);
+      } catch (err) {
+        callback(err, null);
+      }
+    });
+  
+    readStream.on('error', (err) => {
+      callback(err, null);
+    });
+  };
+
+module.exports = {addData, createStream}

@@ -56,9 +56,24 @@ export const Home = () => {
             )
     }
 
+    const getData = () => {
+        axios
+        .get(`${process.env.REACT_APP_SERVER}/getData`)
+        .then((rsp) => {
+            console.log(rsp)
+        })
+        .catch((err) => 
+            console.log(err)
+        )
+    }
+
     return (
         <MainWrapper>
             <MainContainer>
+            <Button 
+                onClick={() => getData()}>
+                Get server data and display to console
+                </Button>
                 <Formik
                 initialValues={data}
                 validationSchema={
